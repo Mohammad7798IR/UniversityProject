@@ -1,0 +1,15 @@
+C:\Users\moham\source\repos\Molla E-Shop\Shop.Application\bin\Debug\net6.0\Shop.Application.deps.json
+C:\Users\moham\source\repos\Molla E-Shop\Shop.Application\bin\Debug\net6.0\Shop.Application.dll
+C:\Users\moham\source\repos\Molla E-Shop\Shop.Application\bin\Debug\net6.0\ref\Shop.Application.dll
+C:\Users\moham\source\repos\Molla E-Shop\Shop.Application\bin\Debug\net6.0\Shop.Application.pdb
+C:\Users\moham\source\repos\Molla E-Shop\Shop.Application\obj\Debug\net6.0\Shop.Application.csproj.AssemblyReference.cache
+C:\Users\moham\source\repos\Molla E-Shop\Shop.Application\obj\Debug\net6.0\Shop.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\moham\source\repos\Molla E-Shop\Shop.Application\obj\Debug\net6.0\Shop.Application.AssemblyInfoInputs.cache
+C:\Users\moham\source\repos\Molla E-Shop\Shop.Application\obj\Debug\net6.0\Shop.Application.AssemblyInfo.cs
+C:\Users\moham\source\repos\Molla E-Shop\Shop.Application\obj\Debug\net6.0\Shop.Application.csproj.CoreCompileInputs.cache
+C:\Users\moham\source\repos\Molla E-Shop\Shop.Application\obj\Debug\net6.0\Shop.Application.dll
+C:\Users\moham\source\repos\Molla E-Shop\Shop.Application\obj\Debug\net6.0\ref\Shop.Application.dll
+C:\Users\moham\source\repos\Molla E-Shop\Shop.Application\obj\Debug\net6.0\Shop.Application.pdb
+C:\Users\moham\source\repos\Molla E-Shop\Shop.Application\bin\Debug\net6.0\Shop.Domain.dll
+C:\Users\moham\source\repos\Molla E-Shop\Shop.Application\bin\Debug\net6.0\Shop.Domain.pdb
+C:\Users\moham\source\repos\Molla E-Shop\Shop.Application\obj\Debug\net6.0\Shop.Application.csproj.CopyComplete

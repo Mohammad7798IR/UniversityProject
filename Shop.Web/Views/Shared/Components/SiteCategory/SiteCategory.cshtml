@@ -1,0 +1,65 @@
+﻿@model List<Shop.Domain.Entities.MarketPlaceStore.Products.Category>
+
+
+
+
+
+<div class="droopmenu-nav">
+    <div class="droopmenu-nav-wrap">
+        <div class="droopmenu-navi">
+            <ul class="droopmenu">
+                <li class="droopmenu-parent" aria-haspopup="true">
+                    <a href="#" aria-expanded="false"><i class="fa fa-bars"></i>&nbsp;&nbsp;گروه های محصولات<em class="droopmenu-topanim"></em></a><div class="dm-arrow"></div>
+                    <ul class="droopmenu-grid droopmenu-grid-9">
+                        <li class="droopmenu-tabs droopmenu-tabs-vertical">
+
+                            @{
+                                var catCount = 0;
+                            }
+                            @foreach (var cat in @Model.Where(x => x.ParentId == null))
+                            {
+
+                                <div class="droopmenu-tabsection droopmenu-tab-active" id="@("droopmenutab"+catCount)">
+
+                                    <a class="droopmenu-tabheader">@cat.Title</a>
+
+                                    <div class="droopmenu-tabcontent">
+                                        <div class="droopmenu-row">
+                                            <ul class="droopmenu-col droopmenu-col4">
+
+
+                                                @foreach (var subCat in @Model.Where(x => x.ParentId == cat.Id))
+                                                {
+
+                                                    <br />
+
+                                                    <li><h4>@subCat.Title</h4></li>
+
+                                                   
+
+                                                    @foreach (var secondSubCat in @Model.Where(x => x.ParentId == subCat.Id))
+                                                    {
+                                                        <li><a href="./products.html">@secondSubCat.Title</a></li>
+                                                    }
+
+                                                 
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                    @{
+                                        catCount = catCount + 10;
+                                    }
+                                </div>
+                            }
+                    </ul>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+

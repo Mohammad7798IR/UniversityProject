@@ -1,0 +1,78 @@
+﻿@using Shop.Domain.Entities.Identity
+@model Shop.Domain.DTOs.UserPanel.UserStoreRequestDTO
+
+@{
+    ViewData["Title"] = "درخواست فروشگاه ";
+}
+
+<section class="inner-page" id="profile-page">
+
+    <partial name="_UserPanelBreadCrumb" />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-12 col-lg-3">
+                            @await Component.InvokeAsync("UserSideBar")
+                        </div>
+
+                        <div class="col-12 col-lg-9 pl-lg-0 pr-lg-2 mt-2 mt-lg-0">
+                            <form asp-area="User" asp-controller="Home" asp-action="StoreRequest" method="post" enctype="multipart/form-data">
+                                <!-- Profile Fields -->
+                                <partial name="_CaptchaInput" />
+                                <input type="hidden" asp-for=Token />
+                                <div class="custom-container bg-light" id="profile-fields">
+                                    <div class="row pt-2 px-3 ">
+                                        <div class="col-12"><h1>اطلاعات فروشگاه</h1></div>
+                                    </div>
+                                    <hr>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="title">نام فروشگاه </div>
+                                                <input asp-for=StoreName class="form-control" />
+                                                <span asp-validation-for=StoreName class=text-danger></span>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="title"> شماره تماس </div>
+                                                <input asp-for=Phone class="form-control" />
+                                                <span asp-validation-for=Phone class=text-danger></span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="title">ادرس</div>
+                                                <input asp-for=Address class="form-control" />
+                                                <span asp-validation-for=Address class=text-danger></span>
+                                            </div>
+                                            <div class="col-6">
+                                                <img style="border-radius:50%; width:150px" alt="Alternate Text" id="imgPreview" />
+                                                <input accept="image/*" id="photo" type="file" name="storeImage" />
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <a><input type="submit" value="ثبت" class="btn btn-success"></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- /Profile Fields -->
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

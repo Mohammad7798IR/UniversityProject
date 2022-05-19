@@ -1,0 +1,336 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Shop.Web
+build_property.RootNamespace = Shop.Web
+build_property.ProjectDir = C:\Users\moham\source\repos\Molla E-Shop\Shop.Web\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\moham\source\repos\Molla E-Shop\Shop.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/Home/ProductsListRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxQcm9kdWN0c0xpc3RSZXF1ZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/Home/StoreListRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxTdG9yZUxpc3RSZXF1ZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/Shared/AdminPagingScripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEFkbWluUGFnaW5nU2NyaXB0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/Shared/Components/AdminNav/_AdminNaveBarSection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcQWRtaW5OYXZcX0FkbWluTmF2ZUJhclNlY3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/Shared/SweetAlertScripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXFN3ZWV0QWxlcnRTY3JpcHRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/Shared/_AdminChatBarSection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkNoYXRCYXJTZWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/Shared/_AdminFooterReferences.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkZvb3RlclJlZmVyZW5jZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/Shared/_AdminHeaderReferences.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkhlYWRlclJlZmVyZW5jZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/Shared/_AdminPagination.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pblBhZ2luYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/Shared/_AdminSideBarSection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pblNpZGVCYXJTZWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/Shared/_ImagePerviewScripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9JbWFnZVBlcnZpZXdTY3JpcHRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/Shared/_RejectItemPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9SZWplY3RJdGVtUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/Shared/_ToasterNorificationShowMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Ub2FzdGVyTm9yaWZpY2F0aW9uU2hvd01lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Seller/Views/Home/CreateProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VsbGVyXFZpZXdzXEhvbWVcQ3JlYXRlUHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Seller/Views/Home/CreateProductGallery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VsbGVyXFZpZXdzXEhvbWVcQ3JlYXRlUHJvZHVjdEdhbGxlcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Seller/Views/Home/EditProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VsbGVyXFZpZXdzXEhvbWVcRWRpdFByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Seller/Views/Home/EditProductGallery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VsbGVyXFZpZXdzXEhvbWVcRWRpdFByb2R1Y3RHYWxsZXJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Seller/Views/Home/FilterProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VsbGVyXFZpZXdzXEhvbWVcRmlsdGVyUHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Seller/Views/Home/GetProductGalleries.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VsbGVyXFZpZXdzXEhvbWVcR2V0UHJvZHVjdEdhbGxlcmllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Seller/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VsbGVyXFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Seller/Views/Shared/Components/SellerSideBar/SellerSideBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VsbGVyXFZpZXdzXFNoYXJlZFxDb21wb25lbnRzXFNlbGxlclNpZGVCYXJcU2VsbGVyU2lkZUJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Seller/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VsbGVyXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/Seller/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VsbGVyXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/SupportAgent/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3VwcG9ydEFnZW50XFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/SupportAgent/Views/Shared/Components/SupportAgentInformation/SupportAgentInformation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3VwcG9ydEFnZW50XFZpZXdzXFNoYXJlZFxDb21wb25lbnRzXFN1cHBvcnRBZ2VudEluZm9ybWF0aW9uXFN1cHBvcnRBZ2VudEluZm9ybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/SupportAgent/Views/Shared/Components/SupportAgentSideBar/SupportAgentSideBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3VwcG9ydEFnZW50XFZpZXdzXFNoYXJlZFxDb21wb25lbnRzXFN1cHBvcnRBZ2VudFNpZGVCYXJcU3VwcG9ydEFnZW50U2lkZUJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/SupportAgent/Views/Shared/_UserPanelBreadCrumb.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3VwcG9ydEFnZW50XFZpZXdzXFNoYXJlZFxfVXNlclBhbmVsQnJlYWRDcnVtYi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/SupportAgent/Views/SupportAgent/ChatWithSupport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3VwcG9ydEFnZW50XFZpZXdzXFN1cHBvcnRBZ2VudFxDaGF0V2l0aFN1cHBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/SupportAgent/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3VwcG9ydEFnZW50XFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/SupportAgent/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3VwcG9ydEFnZW50XFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/User/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/User/Views/Home/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXFJlc2V0UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/User/Views/Home/StoreList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXFN0b3JlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/User/Views/Home/StoreRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXFN0b3JlUmVxdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/User/Views/Home/UserDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXFVzZXJEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/User/Views/Shared/Components/UserInformation/UserInformation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xTaGFyZWRcQ29tcG9uZW50c1xVc2VySW5mb3JtYXRpb25cVXNlckluZm9ybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/User/Views/Shared/Components/UserSideBar/UserSideBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xTaGFyZWRcQ29tcG9uZW50c1xVc2VyU2lkZUJhclxVc2VyU2lkZUJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/User/Views/Shared/_UserPanelBreadCrumb.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xTaGFyZWRcX1VzZXJQYW5lbEJyZWFkQ3J1bWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/User/Views/Support/Chat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xTdXBwb3J0XENoYXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/User/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Areas/User/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Home/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Home/ContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0VXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Home/ProductDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Home/ProductList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Home/QA.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRQS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/PublicAuth/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljQXV0aFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/PublicAuth/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljQXV0aFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/PublicAuth/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljQXV0aFxTaWduSW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/PublicAuth/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljQXV0aFxTaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/Components/SiteCategory/SiteCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2l0ZUNhdGVnb3J5XFNpdGVDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/Components/SiteFooter/SiteFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2l0ZUZvb3RlclxTaXRlRm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/Components/SiteHeader/SiteHeader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2l0ZUhlYWRlclxTaXRlSGVhZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/Components/SiteSlider/SiteSlider.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2l0ZVNsaWRlclxTaXRlU2xpZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/DatePickerScript.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERhdGVQaWNrZXJTY3JpcHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/PagingScripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhZ2luZ1NjcmlwdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_ActiveEmailTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BY3RpdmVFbWFpbFRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_CaptchaInput.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXB0Y2hhSW5wdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_CaptchaScripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXB0Y2hhU2NyaXB0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_DefaultLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EZWZhdWx0TGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_DropDownCSS.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ecm9wRG93bkNTUy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_FooterReferences.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXJSZWZlcmVuY2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_ForgotPasswordTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb3Jnb3RQYXNzd29yZFRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_HeaderReferences.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXJSZWZlcmVuY2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_NoItemFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob0l0ZW1Gb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RGb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_PaginationStyles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpbmF0aW9uU3R5bGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_PagingPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpbmdQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_RejectItemEmailTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9SZWplY3RJdGVtRW1haWxUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_TagReferences.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9UYWdSZWZlcmVuY2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_ToasterNorificationShowMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ub2FzdGVyTm9yaWZpY2F0aW9uU2hvd01lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/source/repos/Molla E-Shop/Shop.Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

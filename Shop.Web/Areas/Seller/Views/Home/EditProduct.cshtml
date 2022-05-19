@@ -1,0 +1,122 @@
+﻿@using Shop.Domain.Entities.MarketPlaceStore.Products
+@model Shop.Domain.DTOs.Seller.StoreProduct.EditProductDTO
+@{
+    ViewData["Title"] = "ویرایش محصول";
+}
+
+
+<section class="inner-page" id="profile-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-12 col-lg-3">
+                            @await Component.InvokeAsync("SellerSideBar")
+                        </div>
+
+                        <div class="col-12 col-lg-9 pl-lg-0 pr-lg-2 mt-2 mt-lg-0">
+                            <form asp-area="Seller" asp-controller="Home" asp-action="EditProduct" method="post" enctype="multipart/form-data">
+                                <!-- Profile Fields -->
+                                <input type="hidden" asp-for=Product.Id />
+                                <div class="custom-container bg-light" id="profile-fields">
+                                    <div class="row pt-2 px-3 ">
+                                        <div class="col-12"><h1>اطلاعات محصول</h1></div>
+                                    </div>
+                                    <hr>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="title">نام محصول  </div>
+                                                <input asp-for=ProductName class="form-control" />
+                                                <span asp-validation-for=ProductName class=text-danger></span>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="title"> توضبحات </div>
+                                                <textarea asp-for=Description class="form-control" ckeditor="1"></textarea>
+                                                <span asp-validation-for=Description class=text-danger></span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="title">توضیحات کوتاه </div>
+                                                <textarea asp-for=ShortDescription class="form-control" ckeditor="2"></textarea>
+                                                <span asp-validation-for=ShortDescription class=text-danger></span>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="title">قیمت </div>
+                                                <input type="number" asp-for=Price class="form-control" />
+                                                <span asp-validation-for=Price class=text-danger></span>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <img style="border-radius:50%; width:150px" alt="Alternate Text" id="imgPreview" />
+                                                <input accept="image/*" id="photo" type="file" name="postedFile" />
+                                            </div>
+                                        </div>
+                                        <hr />
+
+                                        <div class="row">
+
+                                            @if (Model.Categories != null && Model.Categories.Any())
+                                            {
+                                                foreach (var category in Model.Categories.Where(x => x.ParentId == null))
+                                                {
+                                                    var isParentCategorySelected = Model.SelectedCategories.Any(s => s == category.Id);
+
+                                                    <ul>
+                                                        <li>
+                                                            <label>
+                                                                <span>@category.Title</span>
+                                                                <input type="checkbox" name=@nameof(Model.SelectedCategories) @(isParentCategorySelected ? "checked" : "") value=@category.Id>
+                                                            </label>
+
+                                                            <br />
+
+                                                            @foreach (var subCategory in Model.Categories.Where(x => x.ParentId == category.Id))
+                                                            {
+                                                                var isSubCategorySelected = Model.SelectedCategories.Any(s => s == subCategory.Id);
+
+                                                                <label>
+                                                                    <span>@subCategory.Title</span>
+                                                                    <input type="checkbox" name=@nameof(Model.SelectedCategories) @(isSubCategorySelected ? "checked" : "") value=@subCategory.Id>
+                                                                </label>
+                                                                <br />
+                                                                @foreach (var SecondSubCategory in Model.Categories.Where(x => x.ParentId == subCategory.Id))
+                                                                {
+                                                                    var isSecondSubCategorySelected = Model.SelectedCategories.Any(s => s == SecondSubCategory.Id);
+
+                                                                    <label>
+                                                                        <span>@SecondSubCategory.Title</span>
+                                                                        <input type="checkbox" name=@nameof(Model.SelectedCategories) @(isSecondSubCategorySelected ? "checked" : "") value=@SecondSubCategory.Id>
+                                                                    </label>
+                                                                }
+                                                            }
+                                                        </li>
+                                                    </ul>
+                                                }
+                                            }
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <a><input type="submit" value="ثبت" class="btn btn-success"></a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /Profile Fields -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

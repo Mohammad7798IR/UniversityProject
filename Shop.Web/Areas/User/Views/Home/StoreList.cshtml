@@ -1,0 +1,98 @@
+﻿@using Shop.Domain.Entities.MarketPlaceStore
+@using Shop.Domain.DTOs.Common
+@model Shop.Domain.DTOs.UserPanel.UserStoreFilterDTO
+@{
+    ViewData["title"] = "لیست درخواست ها";
+
+    var BreadCrumb = new BreadCrumbDto();
+}
+
+<section class="inner-page" id="profile-page">
+
+    <partial name="_UserPanelBreadCrumb" />
+
+
+    <div class="container">
+        <div class="account_dashboard">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    @await Component.InvokeAsync("UserSideBar")
+                </div>
+                <div class="col-sm-8 col-md-8 col-lg-8">
+                    <!-- Tab panes -->
+                    <div class="tab-content dashboard_content">
+                        <div class="tab-pane fade" id="dashboard">
+                            <h3>داشبورد </h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با <a href="#">سفارشات اخیر</a>لورم ایپسوم متن <a href="#">لورم ایپسوم متن ساختگی با تولید</a> لورم <a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</a></p>
+                        </div>
+                        <div class="tab-pane fade active show">
+                            <div class="table-responsive">
+                                @if (Model.Stores != null && Model.Stores.Any())
+                                {
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+
+                                                <th>نام فروشگاه</th>
+                                                <th>تاریخ</th>
+                                                <th>وضعیت</th>
+                                                <th>جزییات</th>
+                                                <th>ویرایش</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            @foreach (var item in Model.Stores)
+                                            {
+                                                <tr>
+
+                                                    <td>@item.StoreName</td>
+                                                    <td>@item.CreatedAt</td>
+                                                    <td>@Html.DisplayFor(Model=>item.StoreAcceptanceState)</td>
+                                                    <td><a class="view">نمایش جزییات</a></td>
+                                                    @if (item.StoreAcceptanceState == StoreAcceptanceState.Accepted || item.StoreAcceptanceState == StoreAcceptanceState.Rejected)
+                                                    {
+                                                        <td><a href="http://localhost:5076/EditRequestSellerPanel/@item.Id" class="view">ویرایش</a></td>
+                                                    }
+
+                                                    else
+                                                    {
+                                                        <td>ویرایش</td>
+                                                    }
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                }
+
+                                else
+                                {
+                                    <partial name="_NoItemFound" />
+                                }
+                            </div>
+                        </div>
+                        <form asp-area="User" asp-controller="Home" asp-action="StoreList" method="get" id="filter-form">
+
+                            <input type="hidden" asp-for=PageId />
+
+                            <div class="footer">
+                                <partial name="_PagingPartial" model="@Model.GetCurrentPaging()" />
+                            </div>
+
+                        </form>
+                        <div class="dashboard_tab_button row">
+                            <ul role="button" class="nav flex-column dashboard-list row col-md-12">
+                                <li class="col-md-3"><a asp-area="User" asp-controller="Home" asp-action="StoreRequest" class="nav-link">ثبت درخواست جدید</a></li>
+
+                            </ul>
+                            <ul role="button" class="nav flex-column dashboard-list row col-md-12">
+                                <li class="col-md-3"><a asp-area="User" asp-controller="Home" asp-action="index" class="nav-link">بازگشت</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

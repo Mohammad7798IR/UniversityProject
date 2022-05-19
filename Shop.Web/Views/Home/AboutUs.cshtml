@@ -1,0 +1,53 @@
+﻿@model Shop.Domain.DTOs.Contact.AppSettingDTO
+
+@{
+    TempData["title"] = "درباره ما";
+}
+
+<section class="inner-page" id="contact-page">
+    <div class="container-fluid" id="page-hero">
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <h1>درباره ما</h1>
+                            <p>با ما بیشتر آشنا شوید.</p>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/">صفحه نخست</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">درباره ما</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-12 col-lg-7">
+                            <div class="title">معرفی فروشگاه</div>
+                            @Model.Description
+                            <hr />
+                            <div class="title">پست الکترونیک</div>
+                            @Model.Email
+                            <hr />
+                            <div class="title">شماره تلفن</div>
+                            @Model.PhoneNumber
+                        </div>
+                        <div class="col-12 col-lg-5 align-self-center h-100">
+                            <img src="/images/about-us.jpg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

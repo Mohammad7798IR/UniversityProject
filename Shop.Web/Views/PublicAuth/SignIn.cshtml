@@ -1,0 +1,76 @@
+﻿@model Shop.Domain.DTOs.Auth.SignInDTO
+
+@{
+    Layout = "_DefaultLayout";
+}
+
+@{
+    ViewData["Title"] = "ورود";
+}
+
+<section class="inner-page" id="contact-page">
+    <div class="container-fluid" id="page-hero">
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <h1>ورود به ناحیه کاربری</h1>
+                            <p>وارد ناحیه کاربری خود در روبیک مارکت شوید.</p>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/">صفحه نخست</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">ورود</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-2 py-md-5">
+        <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1">
+                <div class="content">
+                    <div class="row">
+                        <form method="post" asp-controller="PublicAuth" asp-action="SignIn">
+                            <partial name="_CaptchaInput" />
+                            <input type="hidden" asp-for=Token />
+                            <div class="col-12 col-lg-7 pt-5 pt-md-0 align-self-center">
+                                <div class="title">وارد شوید</div>
+                                <p>با ورود به ناحیه کاربری خود از همه امکانات سایت بهره مند شوید.</p>
+
+                                <div class="form-group">
+                                    <label asp-for="Email">پست الکترونیک :</label>
+                                    <input type="email" asp-for=Email class="form-control">
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Password">رمز عبور :</label>
+                                    <input type="password" asp-for=Password class="form-control">
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="RememberMe">مرا به خاطر بسپار :</label>
+                                    <input type="checkbox" asp-for=RememberMe>
+                                    <span asp-validation-for="RememberMe" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <a asp-controller="PublicAuth" asp-action="ForgotPassword">فراموشی رمز عبور ؟</a>
+                                </div>
+
+                                <div class="form-group">
+                                    <a><input type="submit" value="ورود" class="btn btn-success"></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

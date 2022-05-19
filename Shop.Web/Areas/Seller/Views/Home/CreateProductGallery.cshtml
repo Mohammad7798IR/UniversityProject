@@ -1,0 +1,81 @@
+﻿@model Shop.Domain.DTOs.Seller.StoreProduct.CreateProductGalleryDTO
+@{
+    ViewData["Title"] = "ثبت گالری جدید برای " + ViewBag.product.Title;
+}
+
+<section class="inner-page" id="profile-page">
+    <div class="container-fluid" id="page-hero">
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <h1>ناحیه کاربری</h1>
+                            <p>به پنل فروشگاه روبیک مارکت خوش آمدید.</p>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb" />
+                                <li class="breadcrumb-item"><a href="/">صفحه نخست</a></li>
+                                <li class="breadcrumb-item"><a href="/seller">پنل فروشگاه</a></li>
+                                <li class="breadcrumb-item active"><a>ثبت گالری جدید</a></li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+
+
+    <div class="container">
+        <div class="account_dashboard">
+            <div class="row">
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    @await Component.InvokeAsync("SellerSideBar")
+                </div>
+                <div class="col-sm-12 col-md-9 col-lg-9">
+                    <!-- Tab panes -->
+                    <div class="tab-content dashboard_content">
+                        <div class="tab-pane fade active show" id="account-details">
+                            <h3>@ViewData["Title"] </h3>
+                            <div class="login">
+                                <div class="login_form_container">
+                                    <div class="account_login_form">
+                                        <form asp-area="Seller" asp-controller="Home" asp-action="CreateProductGallery" enctype="multipart/form-data">
+
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <img style="border-radius:50%; width:150px" alt="Alternate Text" id="imgPreview" />
+                                                    <input accept="image/*" id="photo" type="file" name="postedFile" />
+                                                </div>
+
+                                                <div class="col-6">
+
+                                                    <label>اولویت نمایش</label>
+                                                    <input class="form-control" asp-for="DisplayPriority">
+                                                    <span class="text-danger" asp-validation-for="DisplayPriority"></span>
+                                                </div>
+                                            </div>
+
+
+                                            <br />
+                                            <div class="form-group">
+                                                <a><input type="submit" value="ثبت" class="btn btn-success"></a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

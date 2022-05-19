@@ -1,0 +1,55 @@
+﻿@model Shop.Domain.DTOs.UserPanel.UserSideBarDTO
+@using Shop.Application.Utils
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+
+
+<!-- Side Panel -->
+<div class="accordion" id="side-panel">
+    <div class="accordion-item menu-container">
+        <h2 class="accordion-header">
+            <button class="accordion-button bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                <span class="row">
+                    <span class="col-3 col-sm-2 col-lg-3">
+                        @*<img src="/images/user-no-image.jpg" class="rounded-circle"*@
+                        <img src="@(!string.IsNullOrEmpty(@Model.Avatar)?FilePath.AvatarThumb+@Model.Avatar:FilePath.AvatarDefault)" />
+                    </span>
+                    <span class="col-7 col-sm-8 col-lg-7 pt-0 pt-sm-2 pt-md-3 pt-lg-0 align-self-center">
+                        <div id="full-name">@Model.FullName</div>
+                        <div class="mt-2" id="email-mobile">@Model.Email</div>
+                    </span>
+                </span>
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+                <ul>
+
+                    <li>
+                        <a href="/User">
+                            <div>
+                                <div class="icon d-inline-block"><img src="/images/icons/profile-menu/profile.webp" class="pl-2"></div> صفحه اصلی پنل کاربری
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a asp-area="SupportAgent" asp-controller="SupportAgent" asp-action="ChatWithSupport">
+                            <div>
+                                <div class="icon d-inline-block"><img src="/images/icons/profile-menu/profile.webp" class="pl-2"></div>پشتیبانی
+                            </div>
+                        </a>
+                    </li>
+                    <li><hr></li>
+                    <li>
+                        <a asp-controller="PublicAuth" asp-action="SignOut">
+                            <div>
+                                <div class="icon d-inline-block"><img src="/images/icons/profile-menu/exit.webp" class="pl-2"></div> خروج از حساب
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Side Panel -->

@@ -1,0 +1,183 @@
+﻿@model Shop.Domain.DTOs.Admin.FilterStoreDTO
+@using Shop.Domain.DTOs.Admin
+@using Shop.Domain.DTOs.Common
+@using Shop.Domain.Entities.MarketPlaceStore
+@*@using Infa.Domain.ViewModels.Common*@*
+@{
+    ViewData["Title"] = "درخواست های فروشندگی";
+}
+
+<div class="col-xs-4">
+    <div class="well with-header">
+        <div class="header bordered-sky">
+            فیلتر
+        </div>
+        <form asp-area="Admin" asp-controller="Home" asp-action="StoreListRequest" method="get" id="filter-form">
+            <div class="form-group">
+                <label>نام فروشگاه</label>
+                <input class="form-control" asp-for=StoreName>
+            </div>
+            <div class="form-group">
+                <label>تلفن تماس</label>
+                <input class="form-control" asp-for=PhoneNumber>
+            </div>
+            <div class="form-group">
+                <label>تلفن همراه</label>
+                <input class="form-control" asp-for=MobileNumber>
+            </div>
+            <div class="form-group">
+                <label>آدرس فروشگاه</label>
+                <input class="form-control" asp-for=Address>
+            </div>
+            <hr />
+            <h4>وضعیت</h4>
+            <div class="control-group row col-xs-12">
+                <div class="control-group row col-xs-6">
+                    @foreach (var item in Html.GetEnumSelectList<RequesPanelState>())
+                    {
+                        <div class="radio">
+                            <label>
+                                <input type="radio" class="colored-blue" value="@item.Value" name="@nameof(Model.RequesPanelState)" @(Convert.ToInt32(item.Value) == Convert.ToInt32(Model.RequesPanelState) ? "checked":"")>
+                                <span class="text">@item.Text</span>
+                            </label>
+                        </div>
+                    }
+                </div>
+
+                <h4> ترتیب  </h4>
+                <div class="control-group row col-xs-6">
+                    @foreach (var item in Html.GetEnumSelectList<OrderBy>())
+                    {
+                        <div class="radio">
+                            <label>
+                                <input type="radio" class="colored-blue" value="@item.Value" name="@nameof(Model.OrderBy)" @(Convert.ToInt32(item.Value) == Convert.ToInt32(Model.OrderBy) ? "checked":"")>
+                                <span class="text">@item.Text</span>
+                            </label>
+                        </div>
+                    }
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">فیلتر</button>
+        </form>
+    </div>
+</div>
+
+
+<div class="col-xs-8">
+    <div class="well with-header with-footer">
+        <div class="header bordered-sky">
+            @ViewData["Title"]
+        </div>
+        @if (Model.Stores != null && Model.Stores.Any())
+        {
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            شناسه
+                        </th>
+                        <th>
+                            نام فروشگاه
+                        </th>
+                        <th>
+                            تلفن
+                        </th>
+                        <th>
+                            تلفن همراه
+                        </th>
+                        <th>
+                            وضعیت
+                        </th>
+                        <th>
+                            دستورات
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var seller in Model.Stores)
+                    {
+                        <tr id="ajax-url-item-@seller.Id">
+                            <td>
+                                @seller.Id
+                            </td>
+                            <td>
+                                @seller.StoreName
+                            </td>
+                            <td>
+                                @seller.Phone
+                            </td>
+                            <td>
+                                @seller.Mobile
+                            </td>
+                            <td>
+                                @Html.DisplayFor(Model=>seller.StoreAcceptanceState)
+                            </td>
+                            <td>
+                                @if (seller.StoreAcceptanceState != StoreAcceptanceState.Accepted)
+                                {
+                                    <a ajax-url-button="@seller.Id" class="btn btn-success"
+                           asp-area="Admin" asp-controller="Home" asp-action="AcceptStoreRequest" asp-route-storeId="@seller.Id">تایید اطلاعات</a>
+                                }
+
+                                @if (seller.StoreAcceptanceState != StoreAcceptanceState.Rejected)
+                                {
+                                    <a class="btn btn-danger" data-toggle="modal" data-target=".reject-modal-@seller.Id">ردکردن اطلاعات</a>
+                                }
+
+                            </td>
+                        </tr>
+                    }
+
+
+                </tbody>
+                <form asp-area="Admin" asp-controller="Home" asp-action="StoreListRequest" method="get" id="Admin-filter-form">
+
+                    <input type="hidden" asp-for=PageId />
+
+                    <div class="footer">
+                        <partial name="_AdminPagination" model="@Model.GetCurrentPaging()" />
+                    </div>
+
+                </form>
+            </table>
+        }
+        else
+        {
+            <div class="alert alert-warning">
+                <p>
+                    هیچ اطلاعاتی یافت نشد
+                </p>
+            </div>
+        }
+
+    </div>
+</div>
+
+
+@if (Model.Stores != null && Model.Stores.Any())
+{
+    foreach (var seller in Model.Stores)
+    {
+        <div class="modal fade reject-modal-@seller.Id" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myLargeModalLabel">رد کردن اطلاعات</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form asp-area="Admin" asp-controller="Home" asp-action="RejectStoreRequest">
+
+                            <partial name="_RejectItemPartial" model="@(new RejectItemDTO {Id = seller.Id})" />
+                            <hr />
+                            <button class="btn btn-danger" type="submit">رد کردن اطلاعات</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+<partial name="AdminPagingScripts" />

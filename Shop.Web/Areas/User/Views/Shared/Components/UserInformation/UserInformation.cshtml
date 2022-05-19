@@ -1,0 +1,52 @@
+﻿@model Shop.Domain.DTOs.UserPanel.UserInformationDTO
+
+<!-- Profile Fields -->
+<div class="custom-container bg-light" id="profile-fields">
+    <div class="row pt-2 px-3 ">
+        <div class="col-12"><h1>اطلاعات شخصی</h1></div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 profile-field py-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="title">نام و نام خانوادگی</div>
+                        <div class="value">@Model.FullName</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 profile-field py-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="title">شماره تلفن همراه</div>
+                        <div class="value">@Model.PhoneNumber</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 profile-field py-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="title">پست الکترونیک</div>
+                        <div class="value">@Model.Email</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 profile-field py-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="title">تاریخ تولد</div>
+                        <div class="value">@Model.BirthDate</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Profile Fields -->

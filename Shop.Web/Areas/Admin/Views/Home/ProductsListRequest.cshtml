@@ -1,0 +1,174 @@
+﻿@model Shop.Domain.DTOs.Admin.AdminFilterProductsDTO
+@using Shop.Domain.DTOs.Admin
+@using Shop.Domain.DTOs.Common
+@using Shop.Application.Utils
+@using Shop.Domain.Entities.MarketPlaceStore.Products
+
+@{
+    ViewData["Title"] = "درخواست های محصولات";
+}
+
+<div class="col-xs-4">
+    <div class="well with-header">
+        <div class="header bordered-sky">
+            فیلتر
+        </div>
+        <form asp-area="Admin" asp-controller="Home" asp-action="ProductsListRequest" method="get" id="filter-form">
+            <div class="form-group">
+                <label>نام فروشگاه</label>
+                <input class="form-control" asp-for=ProductName>
+            </div>
+
+            <hr />
+            <h4>وضعیت</h4>
+            <div class="control-group row col-xs-12">
+                <div class="control-group row col-xs-6">
+                    @foreach (var item in Html.GetEnumSelectList<ProductAcceptanceState>())
+                    {
+                        <div class="radio">
+                            <label>
+                                <input type="radio" class="colored-blue" value="@item.Value" name="@nameof(Model.ProductAcceptanceState)" @(Convert.ToInt32(item.Value) == Convert.ToInt32(Model.ProductAcceptanceState) ? "checked":"")>
+                                <span class="text">@item.Text</span>
+                            </label>
+                        </div>
+                    }
+                </div>
+
+                <h4> ترتیب  </h4>
+                <div class="control-group row col-xs-6">
+                    @foreach (var item in Html.GetEnumSelectList<OrderBy>())
+                    {
+                        <div class="radio">
+                            <label>
+                                <input type="radio" class="colored-blue" value="@item.Value" name="@nameof(Model.OrderBy)" @(Convert.ToInt32(item.Value) == Convert.ToInt32(Model.OrderBy) ? "checked":"")>
+                                <span class="text">@item.Text</span>
+                            </label>
+                        </div>
+                    }
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">فیلتر</button>
+        </form>
+    </div>
+</div>
+
+
+<div class="col-xs-8">
+    <div class="well with-header with-footer">
+        <div class="header bordered-sky">
+            @ViewData["Title"]
+        </div>
+        @if (Model.Products != null && Model.Products.Any())
+        {
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            شناسه
+                        </th>
+                        <th>
+                            تاریخ درخواست
+                        </th>
+                        <th>
+                            نام محصول
+                        </th>
+                        <th>
+                            وضعیت
+                        </th>
+                        <th>
+                            تصویر
+                        </th>
+                        <th>
+                            دستورات
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in Model.Products)
+                    {
+                        <tr id="ajax-url-item-@product.Id">
+                            <td>
+                                @product.Id
+                            </td>
+                            <td>
+                                @product.CreatedAt
+                            </td>
+                            <td>
+                                @product.Title
+                            </td>
+                            <td>
+                                @Html.DisplayFor(Model=>product.ProductAcceptanceState)
+                            </td>
+                            <td>
+                                <img  style="border-radius:50%; width:50px" src="@(FilePath.ProductOrigin+product.ImageName)" />
+                            </td>
+
+                            <td>
+                                @if (product.ProductAcceptanceState != ProductAcceptanceState.Accepted)
+                                {
+                                    <a ajax-url-button="@product.Id" class="btn btn-success"
+                           asp-area="Admin" asp-controller="Home" asp-action="AcceptProductsListRequest" asp-route-productId="@product.Id">تایید اطلاعات</a>
+                                }
+
+                                @if (product.ProductAcceptanceState != ProductAcceptanceState.Rejected)
+                                {
+                                    <a class="btn btn-danger" data-toggle="modal" data-target=".reject-modal-@product.Id">ردکردن اطلاعات</a>
+                                }
+
+                            </td>
+                        </tr>
+                    }
+
+
+                </tbody>
+                <form asp-area="Admin" asp-controller="Home" asp-action="ProductsListRequest" method="get" id="Admin-filter-form">
+
+                    <input type="hidden" asp-for=PageId />
+
+                    <div class="footer">
+                        <partial name="_AdminPagination" model="@Model.GetCurrentPaging()" />
+                    </div>
+
+                </form>
+            </table>
+        }
+        else
+        {
+            <div class="alert alert-warning">
+                <p>
+                    هیچ اطلاعاتی یافت نشد
+                </p>
+            </div>
+        }
+
+    </div>
+</div>
+
+
+@if (Model.Products != null && Model.Products.Any())
+{
+    foreach (var product in Model.Products)
+    {
+        <div class="modal fade reject-modal-@product.Id" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myLargeModalLabel">رد کردن اطلاعات</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form asp-area="Admin" asp-controller="Home" asp-action="RejectProductRequest">
+
+                            <partial name="_RejectItemPartial" model="@(new RejectItemDTO {Id = product.Id})" />
+                            <hr />
+                            <button class="btn btn-danger" type="submit">رد کردن اطلاعات</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+<partial name="AdminPagingScripts" />

@@ -1,0 +1,138 @@
+﻿@using Shop.Application.Utils
+@model List<Shop.Domain.Entities.MarketPlaceStore.Products.ProductGallery>
+
+    @{
+    ViewData["Title"] = "گالری تصاویر";
+
+}
+
+
+
+
+<section class="inner-page" id="profile-page">
+    <div class="container-fluid" id="page-hero">
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <h1>ناحیه کاربری</h1>
+                            <p>به پنل فروشگاه روبیک مارکت خوش آمدید.</p>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb" />
+                                <li class="breadcrumb-item"><a href="/">صفحه نخست</a></li>
+                                <li class="breadcrumb-item"><a href="/seller">پنل فروشگاه</a></li>
+                                <li class="breadcrumb-item active"><a>گالری تصاویر</a></li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>z
+
+    <br />
+
+
+    <div class="container">
+        <div class="account_dashboard">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    @await Component.InvokeAsync("SellerSideBar")
+                </div>
+                <div class="col-sm-8 col-md-8 col-lg-8">
+                    <!-- Tab panes -->
+                    <div class="tab-content dashboard_content">
+                        <div class="tab-pane fade" id="dashboard">
+                            <h3>داشبورد </h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با <a href="#">سفارشات اخیر</a>لورم ایپسوم متن <a href="#">لورم ایپسوم متن ساختگی با تولید</a> لورم <a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</a></p>
+                        </div>
+                        <div class="tab-pane fade active show">
+                            <br />
+
+                            <div class="form-group">
+                                <a asp-area="Seller" asp-controller="Home" asp-action="CreateProductGallery" asp-route-productId="@ViewBag.productId" class="btn btn-success">ثبت تصویر جدید</a>
+                            </div>
+
+                            <div class="table-responsive">
+
+                                @if (Model != null && Model.Any())
+                                {
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    تصویر
+                                                </th>
+                                                <th>
+                                                    اولویت نمایش
+                                                </th>
+
+                                                <th>
+                                                    دستورات
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            @foreach (var item in @Model)
+                                            {
+                                                <tr>
+
+                                                    <td>
+                                                        <img style="border-radius:50%; width:50px" src="@(FilePath.ProductGalleryImage + item.ImageName)" />
+                                                    </td>
+
+                                                    <td>
+                                                        @item.DisplayPriority
+                                                    </td>
+
+                                                    <td>
+                                                        <a asp-area="Seller" asp-controller="Home" asp-action="EditProductGallery" asp-route-productGalleryId="@item.Id" class="btn btn-warning">ویرایش</a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                }
+
+                                else
+                                {
+                                    <partial name="_NoItemFound" />
+                                }
+                            </div>
+                        </div>
+
+                        @*
+                            <form asp-area="Seller" asp-controller="Home" asp-action="FilterProducts" method="get" id="filter-form">
+
+                            <input type="hidden" asp-for=PageId />
+
+                            <div class="footer">
+                            <partial name="_PagingPartial" model="@Model.GetCurrentPaging()" />
+                            </div>
+
+                            </form>*@
+                        <div class="row">
+                            <div class="row">
+                                <ul role="button" class="nav flex-column dashboard-list row col-md-12">
+                                    <li class="col-md-3"><a asp-area="Seller" asp-controller="Home" asp-action="CreateProduct" class="btn btn-success">ثبت درخواست جدید</a></li>
+                                </ul>
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <ul role="button" class="nav flex-column dashboard-list row col-md-12">
+                                    <li class="col-md-3"><a href="/Seller" class="btn btn-danger">بازگشت</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,170 @@
+﻿@model Shop.Domain.DTOs.Common.Products.FilterProductsDTO
+@using Shop.Application.Utils
+@using Shop.Domain.DTOs.Common.Products
+@using Shop.Domain.Entities.MarketPlaceStore.Products
+
+
+@{
+    TempData["Title"] = "لیست محصولات";
+}
+
+
+<section class="inner-page" id="profile-page">
+    <div class="container-fluid" id="page-hero">
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <h1>ناحیه کاربری</h1>
+                            <p>به پنل فروشگاه روبیک مارکت خوش آمدید.</p>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb" />
+                                <li class="breadcrumb-item"><a href="/">صفحه نخست</a></li>
+                                <li class="breadcrumb-item active"><a>لیست محصولات</a></li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+
+    <div class="container">
+        <div class="account_dashboard">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="accordion filters-container mt-3">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                محدوده قیمت
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                    <form method="get" asp-controller="Home" asp-action="ProductList">
+                                                        <div class="row">
+                                                            <div class="col-6 text-center price-range mt-3">
+                                                                <div>از</div>
+                                                                <input asp-for="MinPrice" id="price-range-from">
+                                                                <div>تومان</div>
+                                                            </div>
+                                                            <div class="col-6 text-center price-range mt-3">
+                                                                <div>تا</div>
+                                                                <input asp-for="MaxPrice" id="price-range-to">
+                                                                <div>تومان</div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="checkbox" asp-for="IsDeleted" />
+                                                                <label for="only-available">شامل کالاهای ناموجود</label>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <select asp-for="OrderBy" asp-items="@Html.GetEnumSelectList<ProductOrderBy>()">
+                                                                    <option selected="@Model.OrderBy"></option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 text-center py-2">
+                                                            <button type="submit" class="btn btn-warning">اعمال فیلتر</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Tab panes -->
+                            <div class=" col-xs-6 tab-content dashboard_content">
+                                <div class="tab-pane fade" id="dashboard">
+                                    <h3>داشبورد </h3>
+                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با <a href="#">سفارشات اخیر</a>لورم ایپسوم متن <a href="#">لورم ایپسوم متن ساختگی با تولید</a> لورم <a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</a></p>
+                                </div>
+                                <div class="tab-pane fade active show">
+                                    <div class="table-responsive">
+                                        @if (Model.Products != null && Model.Products.Any())
+                                        {
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>نام محصول</th>
+                                                        <th>قیمت</th>
+                                                        <th>تصویر</th>
+                                                        <th>موجودیت</th>
+                                                        <th>جزئیات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    @foreach (var item in Model.Products)
+                                                    {
+                                                        <tr>
+
+                                                            <td>@item.Title</td>
+                                                            <td>@item.Price</td>
+
+                                                            <td>
+                                                                <img style="border-radius:50%; width:50px" src="@(!String.IsNullOrEmpty(item.ImageName)?FilePath.ProductOrigin+item.ImageName : FilePath.AvatarDefault)" />
+                                                            </td>
+
+                                                            @if (item.IsDeleted == true)
+                                                            {
+                                                                <td>
+                                                                    ناموجود
+                                                                </td>
+                                                            }
+                                                            @if (item.IsDeleted == false)
+                                                            {
+                                                                <td>
+                                                                    موجود
+                                                                </td>
+                                                            }
+
+                                                            <td>
+                                                                <a class="btn btn-success" asp-controller="Home" asp-action="ProductDetails" asp-route-productId="@item.Id"> جزئیات محصول</a>
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        }
+
+                                        else
+                                        {
+                                            <partial name="_NoItemFound" />
+                                        }
+                                    </div>
+                                </div>
+
+
+                                <form asp-controller="Home" asp-action="ProductList" method="get" id="filter-form">
+
+                                    <input type="hidden" asp-for=PageId />
+                                    <input type="hidden" asp-for="IsDeleted" />
+                                    <input type="hidden" asp-for="MaxPrice" />
+                                    <input type="hidden" asp-for="MinPrice" />
+                                    <input type="hidden" asp-for="OrderBy" />
+
+                                    <div class="footer">
+                                        <partial name="_PagingPartial" model="@Model.GetCurrentPaging()" />
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
