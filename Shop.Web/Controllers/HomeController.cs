@@ -110,6 +110,29 @@ namespace Shop.Web.Controllers
         }
 
 
-        #endregion 
+        #endregion
+
+
+
+
+        #region GetOrderDetails
+
+        [HttpGet]
+        [Route("GetOrderDetails")]
+        [Authorize]
+        public async Task<IActionResult> GetOrderDetails()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("AddOrderDetails/{productId}")]
+        [Authorize]
+        public async Task<IActionResult> AddOrderDetails(string productId)
+        {
+            return View();
+        }
+
+        #endregion
     }
 }

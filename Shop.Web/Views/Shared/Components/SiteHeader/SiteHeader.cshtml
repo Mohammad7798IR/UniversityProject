@@ -39,23 +39,29 @@
                     <div class="row">
                         @if (!User.Identity.IsAuthenticated)
                         {
-                                <div class="col-12 col-md-7 col-lg-6 text-center" id="btn-login-register">
-                                    <a asp-controller="PublicAuth" asp-action="SignIn">ورود</a> /
-                                    <a asp-controller="PublicAuth" asp-action="SignUp">عضویت</a>
-                                </div>
+                            <div class="col-12 col-md-7 col-lg-6 text-center" id="btn-login-register">
+                                <a asp-controller="PublicAuth" asp-action="SignIn">ورود</a> /
+                                <a asp-controller="PublicAuth" asp-action="SignUp">عضویت</a>
+                            </div>
                         }
                         @if (User.Identity.IsAuthenticated)
                         {
-                                <div class="dropdown">
-                                    <img href="user" style="border-radius:50%; width:50px"
+                            <div class="dropdown">
+                                <img href="user" style="border-radius:50%; width:50px"
                                  src="@(!string.IsNullOrEmpty(@Model.Avatar)?FilePath.AvatarThumb+@Model.Avatar:FilePath.AvatarDefault)" alt="Alternate Text" />
-                                    <div class="dropdown-content">
-                                        <a asp-controller="PublicAuth" asp-action="SignOut">خروج</a>
+                                <div class="dropdown-content">
+                                    <a asp-controller="PublicAuth" asp-action="SignOut">خروج</a>
                                     @*   <a href="user">پنل کاربری</a>*@
-                                    </div>
                                 </div>
+                            </div>
 
                         }
+
+                        <div class="col-12 col-md-5 col-lg-6">
+                            <a asp-controller="Home" asp-action="GetOrderDetails">
+                                <div class="btn btn-warning w-100"><i class="fa fa-shopping-cart"></i>&nbsp;<span class="d-md-none d-lg-inline-block">سبد خرید</span></div>
+                            </a>
+                        </div>
 
                     </div>
                 </div>

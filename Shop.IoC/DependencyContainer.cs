@@ -43,6 +43,7 @@ namespace Shop.IoC
             services.AddScoped<IAdminRepository, AdminRepository>();
             services.AddScoped<ISellerRepository, SellerRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             #endregion
 
@@ -56,6 +57,7 @@ namespace Shop.IoC
             services.AddScoped<IAdminService, AdminService>();
             services.AddScoped<ISellerService, SellerService>();
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IOrderService, OrderService>();
             #endregion
         }
     }

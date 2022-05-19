@@ -9,7 +9,7 @@ using Shop.Domain.Entities.Site;
 using Shop.Domain.Entities.Chat;
 using Shop.Domain.Entities.MarketPlaceStore;
 using Shop.Domain.Entities.MarketPlaceStore.Products;
-
+using MarketPlace.DataLayer.Entities.ProductOrder;
 
 namespace Shop.Data.Context
 {
@@ -45,6 +45,10 @@ namespace Shop.Data.Context
         public DbSet<Category> Categories { get; set; }
 
         public DbSet<ProductGallery> ProductGalleries { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
+
+        public DbSet<OrderDetail> OrderDetails { get; set; }
 
         //public DbSet<UserChatGroup> UserChatGroups { get; set; }
     }

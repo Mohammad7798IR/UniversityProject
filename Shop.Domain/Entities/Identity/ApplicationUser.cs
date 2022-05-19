@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using MarketPlace.DataLayer.Entities.ProductOrder;
+using Microsoft.AspNetCore.Identity;
 using Shop.Domain.Entities.Chat;
 using Shop.Domain.Entities.Contact;
 using Shop.Domain.Entities.MarketPlaceStore;
@@ -56,7 +57,7 @@ namespace Shop.Domain.Entities.Identity
 
         public ICollection<Store> Stores { get; set; } = new HashSet<Store>();
 
-        //public ICollection<UserChatGroup> UserChatGroups { get; set; } = new HashSet<UserChatGroup>();
+        public ICollection<Order> Orders { get; set; } = new HashSet<Order>();
     }
 
     #endregion

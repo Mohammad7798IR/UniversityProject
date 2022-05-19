@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MarketPlace.DataLayer.Entities.ProductOrder;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace Shop.Domain.Entities.MarketPlaceStore.Products
@@ -60,6 +61,8 @@ namespace Shop.Domain.Entities.MarketPlaceStore.Products
         public ICollection<ProductCategory> productCategories { get; set; } = new HashSet<ProductCategory>();
 
         public ICollection<ProductGallery> productGalleries { get; set; } = new HashSet<ProductGallery>();
+
+        public ICollection<OrderDetail> OrderDetails { get; set; } = new HashSet<OrderDetail>();
     }
 
     #endregion
